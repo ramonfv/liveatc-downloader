@@ -4,36 +4,45 @@ from cli import get_args
 from liveatc import get_stations, download_archive
 from datetime import datetime, timedelta
 
-# Gets the last Zulu period of 30 minutes
-# E.g. if time is 10:35:00, it will return 10:00:00
-def get_last_zulu_period(date, minutes=30):
-  return date - timedelta(minutes=minutes) - (date - datetime.min) % timedelta(minutes=minutes)
+
+def zulu_range(start_str, end_str, step_min=30):
+  fmt = "%H%MZ"
+  start = datetime.strptime(start_str, fmt)
+  end = datetime.strptime(end_str, fmt)
+  while start <= end:
+    yield start.strftime(fmt)
+    start += timedelta(minutes=step_min)
 
 
 def stations(args):
   stations = get_stations(args.icao)
   for station in stations:
     print(f"[{station['identifier']}] - {station['title']}")
-
     for freq in station['frequencies']:
       print(f"\t{freq['title']} - {freq['frequency']}")
-
     print()
 
 
 def download(args):
   date_now = datetime.utcnow()
+  last_period = date_now - timedelta(minutes=30) - (date_now - datetime.min) % timedelta(minutes=30)
 
-  last_period = get_last_zulu_period(date_now)
+  date = args.date if args.date else last_period.strftime('%b-%d-%Y')
+  time = args.time if args.time else last_period.strftime('%H%MZ')
 
-  if not args.date and not args.time:
-    date = last_period.strftime('%b-%d-%Y')
-    time = last_period.strftime('%H%MZ')
-  else:
-    date = args.date if args.date else date_now.strftime('%b-%d-%Y')
-    time = args.time if args.time else last_period.strftime('%H%MZ')
+  download_archive(args.station, date, time, args.folder, args.prefix)
 
-  download_archive(args.station, date, time)
+
+def download_multi(args):
+  for feed in args.feeds:
+    try:
+      station, prefix, folder = feed.split(',')
+    except ValueError:
+      print(f"❌ Feed inválido: {feed}. Use o formato: station,prefix,folder")
+      continue
+
+    for time in zulu_range(args.start, args.end):
+      download_archive(station, args.date, time, folder, prefix)
 
 
 if __name__ == '__main__':
@@ -44,3 +53,7 @@ if __name__ == '__main__':
     stations(args)
   elif args.command == 'download':
     download(args)
+  elif args.command == 'download-multi':
+    download_multi(args)
+  else:
+    print("❌ Comando inválido. Use --help para ver as opções.")

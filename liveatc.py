@@ -3,6 +3,7 @@ import re
 import requests
 import urllib.request
 from bs4 import BeautifulSoup
+import os
 
 
 def get_stations(icao):
@@ -31,19 +32,24 @@ def get_stations(icao):
     yield {'identifier': identifier, 'title': title, 'frequencies': frequencies, 'up': up}
 
 
-def download_archive(station, date, time):
-  page = requests.get(f'https://www.liveatc.net/archive.php?m={station}')
-  soup = BeautifulSoup(page.content, 'html.parser')
-  archive_identifer = soup.find('option', selected=True).attrs['value']
+def download_archive(station, date, time, folder, prefix):
+    filename = f"{prefix}-{date}-{time}.mp3"
+    url = f"https://archive.liveatc.net/{folder}/{filename}"
+    local_dir = os.path.join("downloads", folder, station)
+    os.makedirs(local_dir, exist_ok=True)
+    path = os.path.join(local_dir, filename)
 
-  # https://archive.liveatc.net/kpdx/KPDX-App-Dep-Oct-01-2021-0000Z.mp3
-  filename = f'{archive_identifer}-{date}-{time}.mp3'
+    print(f"🔗 URL: {url}")
+    print(f"💾 Salvando em: {path}")
 
-  path = f'/tmp/{filename}'
-  url = f'https://archive.liveatc.net/kpdx/{filename}'
-  print(url)
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req) as response, open(path, 'wb') as out_file:
+            out_file.write(response.read())
+        print("✅ Download concluído.")
+    except Exception as e:
+        print(f"❌ Erro ao baixar: {e}")
 
-  urllib.request.urlretrieve(url, path)
 
 
 # download_archive('kpdx_zse', 'Oct-01-2021', '0000Z')
