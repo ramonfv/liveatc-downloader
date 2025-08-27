@@ -34,7 +34,7 @@ def get_stations(icao):
 
 def download_archive(station, date, time, folder, prefix):
     filename = f"{prefix}-{date}-{time}.mp3"
-    url = f"https://archive.liveatc.net/{folder}/{filename}"
+    url = f"https://archive.liveatc.net/{station}/{filename}"
     local_dir = os.path.join("downloads", folder, station)
     os.makedirs(local_dir, exist_ok=True)
     path = os.path.join(local_dir, filename)
