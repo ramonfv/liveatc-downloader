@@ -7,12 +7,16 @@ audio_processor = AudioProcessor(atcVoiceMp3Path)
 
 iir_filtered_audio = audio_processor.bandPassFilterFir(250, 3400)
 
-output_gate_fir, segments_fir, flags_fir = audio_processor.vadGate(iir_filtered_audio, audio_processor.sample_audio_rate, frame_ms=30, mode=3, hang_ms=150, atten_db=80)
+wienerDenoised = audio_processor.wiener_minstat_denoise(iir_filtered_audio, audio_processor.sample_audio_rate)
+
+neuralNoiseReduction = audio_processor._enhance_neural(wienerDenoised, audio_processor.sample_audio_rate)
+
+output_gate_fir, segments_fir, flags_fir = audio_processor.vadGate(neuralNoiseReduction, audio_processor.sample_audio_rate, frame_ms=30, mode=3, hang_ms=150, atten_db=80)
 fir_norm, gain_fir = audio_processor.loudnessNormalizeAdaptive(output_gate_fir, audio_processor.sample_audio_rate, target_dbfs=-20.0, top_db=25.0)
 
 
 resampled_audio_fir = audio_processor.resample_to_16k(fir_norm, audio_processor.sample_audio_rate)
-audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z_fir.wav", resampled_audio_fir)
+audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z_fir_magican.wav", resampled_audio_fir)
 
 
 # iirFilteredAudio = audio_processor.bandPassFilterIir(250, 3400)
@@ -25,10 +29,10 @@ audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul
 # resampled_audio_iir = audio_processor.resample_to_16k(iir_norm, audio_processor.sample_audio_rate)
 # audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z_iir.wav", resampled_audio_iir)
 
-referenceAudio, referenceSampleRate = lr.load(atcVoiceMp3Path, sr=16000)
+# referenceAudio, referenceSampleRate = lr.load(atcVoiceMp3Path, sr=16000)
 
-metrics = AudioMetrics(referenceSampleRate).audio_compare(referenceAudio, resampled_audio_fir)
+# metrics = AudioMetrics(referenceSampleRate).audio_compare(referenceAudio, resampled_audio_fir)
 
 
-for k, v in metrics.items():
-    print(f"{k}: {v}")
+# for k, v in metrics.items():
+#     print(f"{k}: {v}")
