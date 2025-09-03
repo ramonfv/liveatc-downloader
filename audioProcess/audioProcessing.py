@@ -5,7 +5,11 @@ import soundfile as sf
 import webrtcvad
 from pyrnnoise import RNNoise
 import torch
-from speechbrain.inference.enhancement import SpectralMaskEnhancement
+import os
+os.environ["SPEECHBRAIN_LOCAL_CACHE_STRATEGY"] = "copy"
+from speechbrain.inference import SpectralMaskEnhancement
+from denoiser import pretrained
+from denoiser.dsp import convert_audio
 
 global _sb_model_cache, _fb_model_cache
 _sb_model_cache = {}
@@ -235,37 +239,64 @@ class AudioProcessor:
 
     @staticmethod
     def _enhance_metricgan(inputAudio, sampleRate, dry_wet=0.9, device="cuda"):
+
         key = (sampleRate, device)
         if key not in _sb_model_cache:
             enhancer = SpectralMaskEnhancement.from_hparams(
                 source="speechbrain/metricgan-plus-voicebank",
-                target="./_sb_metricgan_cache",
+                savedir="./_sb_metricgan_cache",
                 run_opts={"device": device}
             )
             _sb_model_cache[key] = enhancer
         enhancer = _sb_model_cache[key]
 
-        wav = torch.from_numpy(inputAudio).float().unsqueeze(0)
+        wav = torch.from_numpy(inputAudio).float().unsqueeze(0).to(device).contiguous()
+
+        lengths = torch.ones(1, device=device)
+
+        prev = torch.backends.cudnn.enabled
+        torch.backends.cudnn.enabled = False
 
         with torch.no_grad():
-            enhanced = enhancer.enhance_batch(wav, lengths=torch.tensor([1.0]))
+            enhanced = enhancer.enhance_batch(wav, lengths=lengths)
+            torch.backends.cudnn.enabled = prev
 
-        outputAudio = enhanced.squeeze().cuda().numpy()
+        outputAudio = enhanced.squeeze(0).detach().cpu().numpy()
 
         return dry_wet * outputAudio + (1.0 - dry_wet) * inputAudio
+    
     @staticmethod
     def _enhance_fb_denoiser(inputAudio, sampleRate, dry_wet=0.9, device="cuda", model_name="dns64"):
+
         key = (model_name, device)
-        model = _fb_model_cache[key]
-        sampleRateProvided = sampleRate
+        model = _fb_model_cache.get(key)
+        if model is None:
+            model = pretrained.dns64()
+            model.to(device).eval()
+            _fb_model_cache[key] = model
+
+        audiofloat32 = np.asarray(inputAudio, dtype=np.float32, order='C')
+        wav = torch.from_numpy(audiofloat32).unsqueeze(0)
+        wav = convert_audio(wav, sampleRate, model.sample_rate, model.chin)
+        wav = wav.unsqueeze(0).to(device).contiguous().float()  
+
+        prev = torch.backends.cudnn.enabled
+        torch.backends.cudnn.enabled = False   
 
         with torch.no_grad():
-            wav = torch.from_numpy(inputAudio).float().unsqueeze(0).to(model.device)
-            enhanced = model(wav)[0].cuda().numpy()
+            enhanced = model(wav)
+            if isinstance(enhanced, (tuple, list)):
+                enhanced = enhanced[0]
 
-        outputAudio = enhanced.squeeze(0)
+        torch.backends.cudnn.enabled = prev
+        outputAudio = enhanced.squeeze(0).squeeze(0).detach().cpu().numpy().astype(np.float32)
+
+        if sampleRate != model.sample_rate:
+            outputAudio = lr.resample(outputAudio, orig_sr=model.sample_rate, target_sr=sampleRate, res_type="polyphase").astype(np.float32, copy=False)
 
         return dry_wet * outputAudio + (1.0 - dry_wet) * inputAudio
+    
+
     @staticmethod
     def _enhance_neural(inputAudio, sampleRate, strategy="offline", device="cuda"):
 

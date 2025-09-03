@@ -5,18 +5,18 @@ import librosa as lr
 atcVoiceMp3Path = "downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z.mp3"
 audio_processor = AudioProcessor(atcVoiceMp3Path)
 
-iir_filtered_audio = audio_processor.bandPassFilterFir(250, 3400)
+fir_filtered_audio = audio_processor.bandPassFilterFir(250, 3400)
 
-wienerDenoised = audio_processor.wiener_minstat_denoise(iir_filtered_audio, audio_processor.sample_audio_rate)
+wienerDenoised = audio_processor.wiener_minstat_denoise(fir_filtered_audio, audio_processor.sample_audio_rate)
 
-neuralNoiseReduction = audio_processor._enhance_neural(wienerDenoised, audio_processor.sample_audio_rate)
+neuralNoiseReduction = audio_processor._enhance_neural(wienerDenoised, audio_processor.sample_audio_rate, strategy="complex")
 
 output_gate_fir, segments_fir, flags_fir = audio_processor.vadGate(neuralNoiseReduction, audio_processor.sample_audio_rate, frame_ms=30, mode=3, hang_ms=150, atten_db=80)
 fir_norm, gain_fir = audio_processor.loudnessNormalizeAdaptive(output_gate_fir, audio_processor.sample_audio_rate, target_dbfs=-20.0, top_db=25.0)
 
 
 resampled_audio_fir = audio_processor.resample_to_16k(fir_norm, audio_processor.sample_audio_rate)
-audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z_fir_magican.wav", resampled_audio_fir)
+audio_processor.writeFilteredAudio("downloads/sbrf/sbrf_12960/SBRF-App-12960-Jul-10-2025-0230Z_fir_fb_denoiser.wav", resampled_audio_fir)
 
 
 # iirFilteredAudio = audio_processor.bandPassFilterIir(250, 3400)
