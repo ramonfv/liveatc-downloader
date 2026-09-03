@@ -19,6 +19,25 @@ parser_multi.add_argument("--start", required=True, help="Hora inicial, ex: 0000
 parser_multi.add_argument("--end", required=True, help="Hora final, ex: 2330Z")
 parser_multi.add_argument("--feeds", nargs='+', required=True,
                           help="Lista de feeds no formato station,prefix,folder (ex: sbrf_12960,SBRF-App-12960,sbrf)")
+parser_one = commands.add_parser("download-one", help="Baixar um único MP3 do archive")
+parser_one.add_argument("--remote", required=True, help="Pasta remota no archive (ex: sbrf)")
+parser_one.add_argument("--prefix", required=True, help="Prefixo do arquivo (ex: SBRF-ACC)")
+parser_one.add_argument("--date", required=True, help="Data (ex: Feb-04-2026)")
+parser_one.add_argument("--time", required=True, help="Hora Z (ex: 0000Z)")
+parser_one.add_argument("--out", default="sbrf", help="Pasta local (ex: sbrf)")
+
+parser_urls = commands.add_parser("generate-urls", help="Gerar lista de URLs para download manual")
+parser_urls.add_argument("--date", required=True, help="Data (ex: Feb-04-2026)")
+parser_urls.add_argument("--start", required=True, help="Hora inicial (ex: 0000Z)")
+parser_urls.add_argument("--end", required=True, help="Hora final (ex: 0030Z)")
+parser_urls.add_argument("--feeds", nargs='+', required=True, help="Lista de feeds no formato station,prefix,folder")
+
+parser_interactive = commands.add_parser("interactive-download", help="Download interativo um por um")
+parser_interactive.add_argument("--date", required=True, help="Data (ex: Feb-04-2026)")
+parser_interactive.add_argument("--start", required=True, help="Hora inicial (ex: 0000Z)")
+parser_interactive.add_argument("--end", required=True, help="Hora final (ex: 0030Z)")
+parser_interactive.add_argument("--feeds", nargs='+', required=True, help="Lista de feeds no formato station,prefix,folder")
+
 
 
 

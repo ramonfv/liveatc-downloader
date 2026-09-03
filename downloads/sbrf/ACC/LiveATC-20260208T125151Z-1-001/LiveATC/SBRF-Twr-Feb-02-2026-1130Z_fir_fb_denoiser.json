@@ -1,0 +1,278 @@
+{
+    "name": "SBRF-Twr-Feb-02-2026-1130Z_fir_fb_denoiser",
+    "description": "Transcrição do áudio.",
+    "file_format": "json",
+    "created_at": "2026-02-08T12:51:51Z",
+    "metadata": {
+        "location": "SBRF-Twr",
+        "date_time": "2026-02-02T11:30:00Z",
+        "processing": {
+        "method": "fir_fb_denoiser",
+        "parameters": {
+            "cutoff_frequency": 3000,
+            "filter_order": 64
+        }
+        }
+    },
+    "transcription": [
+        {
+            "started_at": "2026-02-11T00:04:06.891208", 
+            "ended_at": "2026-02-11T00:04:06.891208",
+            "speaker": "Pilot",
+            "text": "Azul 4655 ponto zero meia pronto. ",
+            "observations": "Áudio de baixa qualidade."
+        },
+        {
+            "started_at": "2026-02-11T00:04:18.006344", 
+            "ended_at": "2026-02-11T00:04:18.006344",
+            "speaker": "Tower",
+            "text": "Azul 4655 alinha e mantem pista uno oito. Alimo pista tres meia. Afirmo Alino pista tres meia. ",
+            "observations": "Áudio de baixa qualidade, depois de pista uno oito."
+        },
+        {
+            "started_at": "2026-02-11T00:04:23.320358", 
+            "ended_at": "2026-02-11T00:04:23.320358",
+            "speaker": "Pilot",
+            "text": "--",
+            "observations": "Não foi possível transcrever o áudio, devido à baixa qualidade."
+        },
+        {
+            "started_at": "2026-02-11T00:04:46.371900", 
+            "ended_at": "2026-02-11T00:04:46.371900", 
+            "speaker": "Tower",
+            "text": "Azul 2674, mantém a *** aguarde. Azul dois nove meia uno alterna no uno dois nove decimal meia. Dois zero quatro dois nove meia, boa.",
+            "observations": "Não entendível depois de mantém a. ."
+        },
+        {
+            "started_at": "2026-02-11T00:04:51.066326", 
+            "ended_at": "2026-02-11T00:04:51.066326",
+            "speaker": "Pilot",
+            "text": "Torre recife Azul 4987 RNP da tres meia.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:05:00.962063", 
+            "ended_at": "2026-02-11T00:05:00.962063",
+            "speaker": "Tower",
+            "text": "4987 continua aproximação aguardando QNH uno zero uno quatro. Aguardando uno zero uno quatro 4987. ",
+            "observations": "Primeira palavra do áudio não entendível"
+        },
+        {
+            "started_at": "2026-02-11T00:05:10.028264", 
+            "ended_at": "2026-02-11T00:05:10.029264",
+            "speaker": "Tower",
+            "text": "Azul 2961 acione o código 5212",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:05:25.931076", 
+            "ended_at": "2026-02-11T00:05:25.931076", 
+            "speaker": "Tower",
+            "text": "Azul 4655 atorizada decolagem pista 36, vento uno dois zero grau zero nove nós. Autorizado a decolagem pista 36, Azul 4655.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:06:22.118318", 
+            "ended_at": "2026-02-11T00:06:22.118318", 
+            "speaker": "Tower",
+            "text": "Azul 4987, autorizado pouso pista 36, vento 080 graus 09 nós. Autorizado pouso na 36, AZUL 4987.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:06:41.471893", 
+            "ended_at": "2026-02-11T00:06:41.471893",
+            "speaker": "Tower",
+            "text": "Azul 4655 decolagem 234, chama controle recife, 120 decimal 4, atlerna 129 decimal 6. 204 296 Azul 4655, gracias.",
+            "observations": "Audio misturado Tower e Pilot. Audio do Pilot difícil de entender."
+        },
+        {
+            "started_at": "2026-02-11T00:07:01.259908", 
+            "ended_at": "2026-02-11T00:07:01.259908",
+            "speaker": "Tower",
+            "text": "Azul 2674 report quando visual com a aeronave na 36. Visual.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:07:18.014918", 
+            "ended_at": "2026-02-11T00:07:18.014918",
+            "speaker": "Tower",
+            "text": "Azul 2674, após a passagem do tráfego, alinha e mantém na pista 8, correção, alinhe e mantém na pista 36, após. Ok, após a passagem da aeronave na final, vai alinhar na B 36, Azul 2674.",
+            "observations": "Audio misturado Tower e Pilot. Audio do Pilot difícil de entender."
+        },
+        {
+            "started_at": "2026-02-11T00:09:21.735584", 
+            "ended_at": "2026-02-11T00:09:21.735584", 
+            "speaker": "Tower",
+            "text": "Azul 4987, salas 37, autorizado o táxi, tem (não entendível) agora direita na BRAVO? Afirmo. Ciente, autorizado táxi direita na BRAVO, após (não entendível), BOX10. Direita Bravo, MIKE, BOX10, AZUL4987",
+            "observations": "Audio misturado Tower e Pilot. Áudio díficil de entender."
+        },
+        {
+            "started_at": "2026-02-11T00:09:45.897846", 
+            "ended_at": "2026-02-11T00:09:45.897846",
+            "speaker": "Tower",
+            "text": "Azul 2674 autorizado decolagem pista 36, vento 130 graus 05 nós. Autorizado a decolagem, AZUL 2674.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:10:53.471225", 
+            "ended_at": "2026-02-11T00:10:53.471225", 
+            "speaker": "Tower",
+            "text": "Azul 2674 decolar 239, chame controle recife 120 decimal 4, alterna 129 decimal 6. 294 meia alterna, AZUL 2674.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:16:11.743044", 
+            "ended_at": "2026-02-11T00:16:11.743044",
+            "speaker": "Pilot",
+            "text": "Torre Recife, bom dia. Papa Romeo tango ex november (alguma coisa Juliete) ponto.",
+            "observations": "Áudio com baixa qualidade, difícil de entender."
+        },
+        {
+            "started_at": "2026-02-11T00:16:23.249797", 
+            "ended_at": "2026-02-11T00:16:23.249797",
+            "speaker": "Tower",
+            "text": "Papa Romeu tango echo november, autorizado alinhar e decolar na pista 18 a partir da Juliete, vento 080, correção.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:16:28.958823", 
+            "ended_at": "2026-02-11T00:16:28.958823",
+            "speaker": "Tower",
+            "text": "090 graus, 05 nós.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:17:49.722222", 
+            "ended_at": "2026-02-11T00:17:49.723725",
+            "speaker": "Tower",
+            "text": "Papa Romeo Tango echo november, decolar dez quatro meia, chame controle Recife 120.4, alterna 129.6. 204, até mais.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:21:20.027090", 
+            "ended_at": "2026-02-11T00:21:20.027090",
+            "speaker": "Pilot",
+            "text": "Torre Recife, muito bom dia, Azul 4330,  próximo ao ponto de espera (final não entendível). AZUL 4330, autorizado alinhar e decolar, pista 18, vento 090 graus 09 nós. Bom dia, alinha e decola, pista 18, AZUL 4330.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:22:22.066928", 
+            "ended_at": "2026-02-11T00:22:22.066928", 
+            "speaker": "Pilot",
+            "text": "Torre Boas, Azul 2682, ponto zero ponto.",
+            "observations": "Áudio com baixa qualidade, difícil de entender."
+        },
+        {
+            "started_at": "2026-02-11T00:22:31.770899", 
+            "ended_at": "2026-02-11T00:22:31.770899",
+            "speaker": "Tower",
+            "text": "Azul 2682, alinhe e mantém, pista 18. Alinha e matém 18, AZUL 2682.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:23:27.052906", 
+            "ended_at": "2026-02-11T00:23:27.052906", 
+            "speaker": "Tower",
+            "text": "Azul 4330, decolar 251, chame o controle Recife, 120 decimal 4, alterna 129 decimal 6. 294 meia alterna, AZUL 4330.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:23:34.886118", 
+            "ended_at": "2026-02-11T00:23:34.886118",
+            "speaker": "Pilot",
+            "text": "Controle, 1204 1296, Azul 4330, grato bom dia.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:23:40.966077", 
+            "ended_at": "2026-02-11T00:23:40.966077", 
+            "speaker": "Tower", 
+            "text": "Azul 2682 já tá alinhando? Afirmativo, já tá alinhando. Ciente.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:24:01.425698", 
+            "ended_at": "2026-02-11T00:24:01.425698",
+            "speaker": "Pilot",
+            "text": "TORI, Recife, GOL 1946, estabilizado, ILS WISC, da 18. GOL 1946, continue a aproximação aguardando, QNH 1014.",
+            "observations": "Audio misturado Tower e Pilot. Comunicação parecia estar em espanhol nas primeiras palavras."
+        },
+        {
+            "started_at": "2026-02-11T00:24:04.749026", 
+            "ended_at": "2026-02-11T00:24:04.749026",
+            "speaker": "Pilot",
+            "text": "",
+            "observations": "Comunicação em Espanhol, não considerado."
+        },
+        {
+            "started_at": "2026-02-11T00:24:31.050033", 
+            "ended_at": "2026-02-11T00:24:31.050033", 
+            "speaker": "Tower",
+            "text": "Azul 2682, ao alinhar autorizado decolagem pista 18, vento 090 graus 07 nós. Livre decolagem, 18, AZUL 2682.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:25:27.773485", 
+            "ended_at": "2026-02-11T00:25:27.773485", 
+            "speaker": "Tower",
+            "text": "GOL 1946 autorizado pouso pista 18, vento 090 graus 07 nós. Autorizado pouso pista 18, GOL 1946.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:25:46.089153", 
+            "ended_at": "2026-02-11T00:25:46.089153", 
+            "speaker": "Tower",
+            "text": "Azul 2682 decolagem 254, chame controle Recife 120 decimal 4, alterna 129 decimal 6.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:26:36.380039", 
+            "ended_at": "2026-02-11T00:26:36.380039", 
+            "speaker": "Pilot",
+            "text": "Torre Recife, Azul 2926, bom dia.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:26:46.252640", 
+            "ended_at": "2026-02-11T00:26:46.252640", 
+            "speaker": "Tower",
+            "text": " Bom dia, Azul 2926, continue aproximação, aguardando, é no número 2, QNH 1014. Ciente, número 2 na aproximação, AZUL 2926.",
+            "observations": "Audio misturado Tower e Pilot"
+        },
+        {
+            "started_at": "2026-02-11T00:28:02.182017", 
+            "ended_at": "2026-02-11T00:28:02.182017",
+            "speaker": "Tower",
+            "text": "Gol 1946, (alguma coisa) 56, autorizado táxi, esquerda na LIMA, direita a MAIKE, BOX07. Autorizado LIMA, MAIKE, BOX07, GOL 1946, obrigado.",
+            "observations": "Audio misturado Tower e Pilot"
+        },
+        {
+            "started_at": "2026-02-11T00:28:39.358501", 
+            "ended_at": "2026-02-11T00:28:39.358501",
+            "speaker": "Tower",
+            "text": "Azul 2926, autorizado pouso pista 18, vento 110 graus 12 nós. Autorizado pouso, pista 18, AZUL 2926.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:29:51.578495", 
+            "ended_at": "2026-02-11T00:29:51.578495",
+            "speaker": "Pilot",
+            "text": "Torre, bom dia. Azul 4079, estabilizado WISC da 18.",
+            "observations": ""
+        },
+        {
+            "started_at": "2026-02-11T00:30:02.092005", 
+            "ended_at": "2026-02-11T00:30:02.092005",
+            "speaker": "Tower",
+            "text": "Voo AZUL 4079, continue a aproximação aguardando, QNH 1014. 1014, AZUL 4079.",
+            "observations": "Audio misturado Tower e Pilot."
+        },
+        {
+            "started_at": "2026-02-11T00:31:00.348862", 
+            "ended_at": "2026-02-11T00:31:00.348862", 
+            "speaker": "Tower",
+            "text": "Azul 2926, (alguma coisa) 59, autorizado táxi, esquerda na LIMA, esquerda a MAIKE, BOX14. Esquerda a LIMA, esquerda a MAIC, BOX14, AZUL 2926. ",
+            "observations": "Audio misturado Tower e Pilot. Baixa qualidade do áudio."
+        }
+    ]
+}

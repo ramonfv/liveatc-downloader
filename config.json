@@ -1,0 +1,61 @@
+{
+  "audio_paths": {
+    "input_audio": "C:\\ReposGithub\\co-pilot-mind\\atcVoiceGeneration\\cruzeiroAlternate\\voo_flymov1234_controleParaCopiloto1.wav",
+    "output_audio": "C:\\ReposGithub\\co-pilot-mind\\atcVoiceGeneration\\cruzeiroAlternate\\voo_flymov1234_controleParaCopiloto1Cleaned.wav",
+    "reference_audio": null
+  },
+  "audio_processing": {
+    "fir_filter": {
+      "enabled": true,
+      "low_freq": 250,
+      "high_freq": 3400,
+      "numtaps": 401,
+      "equalize": true
+    },
+    "wiener_denoise": {
+      "enabled": true,
+      "noise_window_s": 1.5,
+      "alpha_spec": 0.8,
+      "alpha_dd": 0.98,
+      "bias_correction": 1.5,
+      "min_gain_db": -15.0
+    },
+    "neural_enhancement": {
+      "enabled": true,
+      "strategy": "complex",
+      "dry_wet": 0.9,
+      "device": "cuda",
+      "model_name": "dns64"
+    },
+    "vad_gate": {
+      "enabled": true,
+      "frame_ms": 30,
+      "mode": 3,
+      "hang_ms": 150,
+      "atten_db": 80
+    },
+    "loudness_normalize": {
+      "enabled": true,
+      "target_dbfs": -20.0,
+      "top_db": 25.0
+    },
+    "resampling": {
+      "enabled": true,
+      "target_sr": 16000,
+      "res_type": "kaiser_best"
+    }
+  },
+  "output_settings": {
+    "save_filtered_audio": true,
+    "save_vad_segments": false,
+    "save_metrics": false,
+    "log_processing": true
+  },
+  "metrics": {
+    "compute_lsd": false,
+    "compute_mfcc": false,
+    "compute_snr": false,
+    "n_fft": 512,
+    "hop_length": 160
+  }
+}

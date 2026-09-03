@@ -296,7 +296,6 @@ class AudioProcessor:
 
         return dry_wet * outputAudio + (1.0 - dry_wet) * inputAudio
     
-
     @staticmethod
     def _enhance_neural(inputAudio, sampleRate, strategy="offline", device="cuda"):
 
@@ -310,6 +309,268 @@ class AudioProcessor:
 
         elif strategy == "complex":
             return AudioProcessor._enhance_fb_denoiser(inputAudio, sampleRate)
+
+    @staticmethod
+    def _enhance_neural_chunked(inputAudio, sampleRate,
+                                strategy="complex",
+                                device="cuda",
+                                chunk_seconds=20,
+                                overlap_seconds=0.5):
+        """
+        Processa áudio neural em chunks com overlap-add (OLA) para evitar seams.
+        overlap_seconds ~ 0.25 a 1.0s costuma ficar bom.
+        """
+        import torch
+
+        x = AudioUtils._ensure_mono(AudioUtils._soft_limiter(inputAudio, ceiling_dbfs=-1.0))
+        x = np.asarray(x, dtype=np.float32)
+
+        chunk_size = int(chunk_seconds * sampleRate)
+        ov = int(overlap_seconds * sampleRate)
+        ov = min(max(0, ov), max(0, chunk_size // 2))
+
+        if chunk_size <= 0 or chunk_size <= ov:
+            raise ValueError("chunk_seconds muito pequeno ou overlap grande demais.")
+
+        # janela de crossfade (Hann) só no overlap
+        if ov > 0:
+            win_in = np.sin(np.linspace(0, np.pi/2, ov, dtype=np.float32))**2
+            win_out = win_in[::-1]
+        else:
+            win_in = win_out = None
+
+        y = np.zeros_like(x, dtype=np.float32)
+        wsum = np.zeros_like(x, dtype=np.float32)
+
+        step = chunk_size - ov
+        total = (len(x) + step - 1) // step
+
+        print(f"🔄 Neural OLA: chunk={chunk_seconds}s overlap={overlap_seconds}s (total chunks ~ {total})")
+
+        for k, start in enumerate(range(0, len(x), step), 1):
+            end = min(start + chunk_size, len(x))
+            chunk = x[start:end]
+
+            # pad para chunk_size (melhora consistência)
+            if len(chunk) < chunk_size:
+                chunk = np.pad(chunk, (0, chunk_size - len(chunk)))
+
+            if strategy == "lite":
+                enh = AudioProcessor._enhance_rnnNoise(chunk, sampleRate)
+            elif strategy == "offline":
+                enh = AudioProcessor._enhance_metricgan(chunk, sampleRate, device=device)
+            elif strategy == "complex":
+                enh = AudioProcessor._enhance_fb_denoiser(chunk, sampleRate, device=device)
+            else:
+                raise ValueError(f"strategy inválida: {strategy}")
+
+            enh = np.asarray(enh, dtype=np.float32)
+
+            # recorta padding
+            enh = enh[:(end - start)]
+
+            # aplica janelas no overlap
+            ww = np.ones_like(enh, dtype=np.float32)
+            if ov > 0 and (end - start) > 1:
+                # fade-in no começo (exceto no primeiro chunk)
+                if start > 0:
+                    L = min(ov, len(enh))
+                    ww[:L] *= win_in[:L]
+                # fade-out no fim (exceto se é o último)
+                if end < len(x):
+                    L = min(ov, len(enh))
+                    ww[-L:] *= win_out[:L]
+
+            y[start:end] += enh * ww
+            wsum[start:end] += ww
+
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
+        wsum = np.maximum(wsum, 1e-6)
+        out = (y / wsum).astype(np.float32, copy=False)
+        print("✅ Processamento neural (OLA) concluído!")
+        return out
+
+
+    def lowPassFilterIir(self, cutoff_hz=3800.0, order=6):
+        """Low-pass IIR Butterworth (causal). Útil para conter artefatos HF pós-denoise."""
+        nyq = self.sample_audio_rate / 2.0
+        cutoff_hz = min(float(cutoff_hz), nyq - 1.0)
+        sos = signal.iirfilter(order, cutoff_hz, btype='lowpass', ftype='butter',
+                               output='sos', fs=self.sample_audio_rate)
+        y = signal.sosfilt(sos, self.input_audio)  # se quiser aplicar em outro sinal, use lowPassOn(...)
+        return y
+
+    @staticmethod
+    def lowPassOn(x, sr, cutoff_hz=3800.0, order=6):
+        nyq = sr / 2.0
+        cutoff_hz = min(float(cutoff_hz), nyq - 1.0)
+        sos = signal.iirfilter(order, cutoff_hz, btype='lowpass', ftype='butter',
+                               output='sos', fs=sr)
+        return signal.sosfilt(sos, x).astype(np.float32, copy=False)
+
+    @staticmethod
+    def _apply_fade_edges(y, mask, sr, fade_ms=10):
+        """Aplica fade-in/out curto nos pontos de transição do mask para evitar clicks."""
+        if fade_ms <= 0:
+            return y
+        fade_len = int(sr * fade_ms / 1000.0)
+        if fade_len <= 1:
+            return y
+
+        mask_i = mask.astype(np.int32)
+        # transições: 0->1 (rise) e 1->0 (fall)
+        d = np.diff(mask_i, prepend=mask_i[0])
+        rises = np.where(d == 1)[0]
+        falls = np.where(d == -1)[0]
+
+        y2 = y.copy()
+
+        # fade in
+        for r in rises:
+            a = max(0, r - fade_len)
+            b = min(len(y2), r + fade_len)
+            L = b - a
+            if L > 1:
+                w = np.linspace(0.0, 1.0, L, dtype=np.float32)
+                y2[a:b] *= w
+
+        # fade out
+        for f in falls:
+            a = max(0, f - fade_len)
+            b = min(len(y2), f + fade_len)
+            L = b - a
+            if L > 1:
+                w = np.linspace(1.0, 0.0, L, dtype=np.float32)
+                y2[a:b] *= w
+
+        return y2
+
+
+
+
+    def vadAttenuateSoft(self,
+                         input_audio,
+                         sample_rate,
+                         frame_ms=20,
+                         mode=2,
+                         hang_ms=250,
+                         atten_db=25.0,
+                         floor_db=-60.0,
+                         fade_ms=10):
+        """
+        Atenuação suave baseada em VAD:
+        - Em não-fala: atenua atten_db (ex.: 20–35 dB), mas mantém um piso (floor_db).
+        - Em fala: preserva.
+        - Com fade nos edges para evitar clicks.
+        Retorna: y, segments, frame_flags
+        """
+        assert frame_ms in (10, 20, 30) and sample_rate in (8000, 16000, 32000, 48000)
+        frame_len = int(sample_rate * frame_ms / 1000)
+
+        # pad para múltiplo de frames
+        pad = (frame_len - (len(input_audio) % frame_len)) % frame_len
+        x = np.pad(input_audio, (0, pad)) if pad else input_audio
+        x = np.asarray(x, dtype=np.float32)
+
+        # VAD usa int16
+        x_i16 = (np.clip(x, -1.0, 1.0) * 32767).astype(np.int16)
+        vad = webrtcvad.Vad(mode)
+
+        num_frames = len(x_i16) // frame_len
+        frame_flags = np.zeros((num_frames,), dtype=bool)
+        for i in range(num_frames):
+            fr = x_i16[i * frame_len:(i + 1) * frame_len].tobytes()
+            frame_flags[i] = vad.is_speech(fr, sample_rate)
+
+        # hang smoothing (dilatação temporal)
+        hang = max(0, int(round(hang_ms / frame_ms)))
+        if hang > 0:
+            kernel = np.ones(2 * hang + 1, dtype=int)
+            frame_flags = (np.convolve(frame_flags.astype(int), kernel, mode='same') > 0)
+
+        # máscara por amostra
+        mask = np.repeat(frame_flags, frame_len)[:len(x)]
+
+        # Atenuação suave + piso
+        att = 10 ** (-float(atten_db) / 20.0)
+
+        # piso absoluto em amplitude (evita “silêncio digital” e melhora STT)
+        floor_lin = 10 ** (float(floor_db) / 20.0)
+
+        y = x.copy()
+        y[~mask] *= att
+
+        # aplica piso em não-fala (muito leve): mantém ruído baixo porém não zera
+        # isso evita que o ASR trate transientes como tokenização esquisita
+        if floor_lin > 0:
+            ns = ~mask
+            y[ns] = np.clip(y[ns], -floor_lin, floor_lin)
+
+        # fades nos edges do mask (remove clicks)
+        y = self._apply_fade_edges(y, mask, sample_rate, fade_ms=fade_ms)
+
+        # segments (em segundos)
+        segments = []
+        if frame_flags.any():
+            i = 0
+            while i < num_frames:
+                if frame_flags[i]:
+                    s = i
+                    while i < num_frames and frame_flags[i]:
+                        i += 1
+                    e = i
+                    segments.append((s * frame_ms / 1000.0, e * frame_ms / 1000.0))
+                else:
+                    i += 1
+
+        if pad:
+            y = y[:-pad]
+
+        return y.astype(np.float32, copy=False), segments, frame_flags
+
+
+
+    def loudnessNormalizeSpeechAware(self, input_audio, sample_rate,
+                                     speech_mask_samples,
+                                     target_dbfs=-20.0,
+                                     max_gain_db=12.0,
+                                     min_gain_db=-12.0):
+        """
+        Normaliza com base SOMENTE na fala (speech_mask_samples=True),
+        com limites de ganho para evitar amplificar ruído residual.
+        """
+        x = np.asarray(input_audio, dtype=np.float32)
+        m = np.asarray(speech_mask_samples, dtype=bool)
+        if len(m) != len(x):
+            m = m[:len(x)] if len(m) >= len(x) else np.pad(m, (0, len(x)-len(m)), constant_values=False)
+
+        # se não tem fala detectada, cai para RMS global
+        ref = x[m] if np.any(m) else x
+
+        rms = float(np.sqrt(np.mean(ref**2) + 1e-12))
+        target_lin = 10.0 ** (target_dbfs / 20.0)
+
+        gain = target_lin / max(rms, 1e-9)
+        gain_db = 20.0 * np.log10(gain + 1e-12)
+
+        gain_db = float(np.clip(gain_db, min_gain_db, max_gain_db))
+        gain = 10.0 ** (gain_db / 20.0)
+
+        y = x * gain
+
+        # limiter suave anti-clip
+        peak = float(np.max(np.abs(y)) + 1e-12)
+        if peak > 0.999:
+            y = y * (0.999 / peak)
+
+        return y.astype(np.float32, copy=False), gain
+
+
+
+
+
 
 class AudioUtils:
 

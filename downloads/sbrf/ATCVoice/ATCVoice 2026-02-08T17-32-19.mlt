@@ -1,0 +1,1001 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.33.0" title="Shotcut version 25.05.11" producer="main_bin">
+  <profile description="PAL 4:3 DV or DVD" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <chain id="chain0" out="00:00:10.560">
+    <property name="length">00:00:10.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/ATC/ATC_atc.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">705600</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T21:04:05</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">cc126ac5880ceb285c021779dde0bc95</property>
+  </chain>
+  <chain id="chain1" out="00:00:04.120">
+    <property name="length">00:00:04.160</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/ATC/falseATC/frase1.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">705600</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T21:25:23</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8a51508582f65d405fe1bcdba6969063</property>
+    <property name="ignore_points">1</property>
+    <property name="shotcut:caption">frase1.wav</property>
+  </chain>
+  <chain id="chain2" out="00:28:00.360">
+    <property name="length">00:28:00.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001/LiveATC/SBRF-Twr-Feb-02-2026-1130Z_fir_fb_denoiser_AudioAdicionado.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">2</property>
+    <property name="meta.media.0.stream.type">video</property>
+    <property name="meta.media.0.stream.frame_rate">25</property>
+    <property name="meta.media.0.stream.sample_aspect_ratio">1</property>
+    <property name="meta.media.0.codec.width">1920</property>
+    <property name="meta.media.0.codec.height">1080</property>
+    <property name="meta.media.0.codec.rotate">0</property>
+    <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+    <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+    <property name="meta.media.0.codec.colorspace">709</property>
+    <property name="meta.media.0.codec.color_trc">1</property>
+    <property name="meta.media.0.codec.name">h264</property>
+    <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+    <property name="meta.media.0.codec.bit_rate">16804</property>
+    <property name="meta.attr.0.stream.handler_name.markup">VideoHandler</property>
+    <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+    <property name="meta.media.1.stream.type">audio</property>
+    <property name="meta.media.1.codec.sample_fmt">fltp</property>
+    <property name="meta.media.1.codec.sample_rate">16000</property>
+    <property name="meta.media.1.codec.channels">1</property>
+    <property name="meta.media.1.codec.layout">mono</property>
+    <property name="meta.media.1.codec.name">aac</property>
+    <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+    <property name="meta.media.1.codec.bit_rate">4809</property>
+    <property name="meta.attr.1.stream.handler_name.markup">SoundHandler</property>
+    <property name="meta.attr.1.stream.vendor_id.markup">[0][0][0][0]</property>
+    <property name="meta.attr.major_brand.markup">isom</property>
+    <property name="meta.attr.minor_version.markup">512</property>
+    <property name="meta.attr.compatible_brands.markup">isomiso2avc1mp41</property>
+    <property name="meta.attr.encoder.markup">Lavf61.7.100</property>
+    <property name="seekable">1</property>
+    <property name="meta.media.sample_aspect_num">1</property>
+    <property name="meta.media.sample_aspect_den">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2026-02-11T22:04:56</property>
+    <property name="vstream">0</property>
+    <property name="meta.media.frame_rate_num">25</property>
+    <property name="meta.media.frame_rate_den">1</property>
+    <property name="meta.media.colorspace">709</property>
+    <property name="meta.media.color_trc">1</property>
+    <property name="meta.media.has_b_frames">0</property>
+    <property name="meta.media.width">1920</property>
+    <property name="meta.media.height">1080</property>
+    <property name="meta.media.aspect_ratio">1</property>
+    <property name="meta.media.color_range">mpeg</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">62a624ec6dfccdbab392b0096258dc15</property>
+    <property name="ignore_points">1</property>
+    <property name="meta.media.top_field_first">0</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="shotcut:caption">SBRF-Twr-Feb-02-2026-1130Z_fir_fb_denoiser_AudioAdicionado.wav</property>
+  </chain>
+  <chain id="chain3" out="00:05:15.440">
+    <property name="length">00:05:15.480</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/copiloto/comunicacaoCopiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:19:49</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">0e2f8927dfdb726771524fee598ca647</property>
+  </chain>
+  <chain id="chain4" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+  </chain>
+  <chain id="chain5" out="00:31:54.000">
+    <property name="length">00:31:54.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001/LiveATC/SBRF-ACC-Feb-04-2026-1600Z_16khz.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="meta.attr.artist.markup">SBRF Recife ACC/LiveATC.net</property>
+    <property name="meta.attr.title.markup">Feb-04-2026-1600Z</property>
+    <property name="meta.attr.encoder.markup">Lavf61.7.100</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-08T22:54:30</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">9a61d3602aa5ab789e8177d209099fbe</property>
+  </chain>
+  <chain id="chain6" out="00:09:06.320">
+    <property name="length">00:09:06.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/copilotoespacado.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="meta.attr.encoder.markup">Lavf61.7.100</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:57:08</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">1aa5abfdebecc131242ddd5c326af80e</property>
+  </chain>
+  <chain id="chain7" out="00:00:05.240">
+    <property name="length">00:00:05.280</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/ATC/falseATC/frase2.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">705600</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T21:28:14</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">78414cf2123fe0cc7c3f6c369bdf0193</property>
+  </chain>
+  <playlist id="main_bin" title="Shotcut version 25.05.11">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:skipConvert">0</property>
+    <property name="xml_retain">1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:00:10.560"/>
+    <entry producer="chain1" in="00:00:00.000" out="00:00:04.120"/>
+    <entry producer="chain2" in="00:00:00.000" out="00:28:00.360"/>
+    <entry producer="chain3" in="00:00:00.000" out="00:05:15.440"/>
+    <entry producer="chain4" in="00:00:00.000" out="00:02:16.360"/>
+    <entry producer="chain5" in="00:00:00.000" out="00:31:54.000"/>
+    <entry producer="chain6" in="00:00:00.000" out="00:09:06.320"/>
+    <entry producer="chain7" in="00:00:00.000" out="00:00:05.240"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:05:52.080">
+    <property name="length">00:05:52.120</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:05:52.080"/>
+  </playlist>
+  <chain id="chain8" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain9" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain10" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain11" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain12" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain13" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain14" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain15" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain16" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain17" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain18" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain19" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain20" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain21" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain22" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain23" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain24" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain25" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain26" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain27" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain28" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain29" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain30" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain31" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain32" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <chain id="chain33" out="00:02:16.360">
+    <property name="length">00:02:16.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/co-pilot-mind/atcVoiceGeneration/Piloto/comunicacaoPiloto.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-11T22:34:26</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">71bbae6a4e7017c3e9443c0d0235301b</property>
+    <property name="shotcut:caption">comunicacaoPiloto.wav</property>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="chain8" in="00:00:00.480" out="00:00:10.720">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:03.400"/>
+    <entry producer="chain9" in="00:00:10.760" out="00:00:13.440">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:04.160"/>
+    <entry producer="chain10" in="00:00:13.480" out="00:00:18.040">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:05.720"/>
+    <entry producer="chain11" in="00:00:18.080" out="00:00:20.680">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:04.400"/>
+    <entry producer="chain12" in="00:00:20.720" out="00:00:34.520">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:06.520"/>
+    <entry producer="chain13" in="00:00:34.560" out="00:00:36.920">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:14.760"/>
+    <entry producer="chain14" in="00:00:36.960" out="00:00:44.160">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:12.440"/>
+    <entry producer="chain15" in="00:00:44.200" out="00:00:47.880">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:11.000"/>
+    <entry producer="chain16" in="00:00:47.920" out="00:00:52.920">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:13.600"/>
+    <entry producer="chain17" in="00:00:52.960" out="00:00:58.200">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:09.480"/>
+    <entry producer="chain18" in="00:00:58.240" out="00:01:07.560">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:10.560"/>
+    <entry producer="chain19" in="00:01:07.600" out="00:01:12.440">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:06.960"/>
+    <entry producer="chain20" in="00:01:12.480" out="00:01:15.160">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:09.640"/>
+    <entry producer="chain21" in="00:01:15.200" out="00:01:19.480">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:14.440"/>
+    <entry producer="chain22" in="00:01:19.520" out="00:01:21.720">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:10.000"/>
+    <entry producer="chain23" in="00:01:21.760" out="00:01:27.440">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:10.600"/>
+    <entry producer="chain24" in="00:01:27.480" out="00:01:31.920">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:07.120"/>
+    <entry producer="chain25" in="00:01:31.960" out="00:01:34.480">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:08.320"/>
+    <entry producer="chain26" in="00:01:34.520" out="00:01:37.160">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:06.800"/>
+    <entry producer="chain27" in="00:01:37.200" out="00:01:41.040">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:09.760"/>
+    <entry producer="chain28" in="00:01:41.080" out="00:01:47.120">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:08.680"/>
+    <entry producer="chain29" in="00:01:47.160" out="00:01:49.240">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:06.120"/>
+    <entry producer="chain30" in="00:01:49.280" out="00:01:55.800">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:11.600"/>
+    <entry producer="chain31" in="00:01:55.840" out="00:02:00.920">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:06.200"/>
+    <entry producer="chain32" in="00:02:00.960" out="00:02:11.800">
+      <property name="shotcut:group">3</property>
+    </entry>
+    <blank length="00:00:03.920"/>
+    <entry producer="chain33" in="00:02:11.840" out="00:02:16.360"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 25.05.11" in="00:00:00.000" out="00:05:52.080">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:skipConvert">0</property>
+    <track producer="background"/>
+    <track producer="playlist0" hide="video"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+  </tractor>
+</mlt>

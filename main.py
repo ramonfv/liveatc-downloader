@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from cli import get_args
-from liveatc import get_stations, download_archive
+from liveatc import get_stations, download_archive, generate_download_urls, interactive_download
 from datetime import datetime, timedelta
 
 
@@ -44,6 +44,21 @@ def download_multi(args):
     for time in zulu_range(args.start, args.end):
       download_archive(station, args.date, time, folder, prefix)
 
+def download_one(args):
+    download_archive(args.remote, args.date, args.time, args.out, args.prefix)
+
+
+def generate_urls_cmd(args):
+    urls = generate_download_urls(args.feeds, args.date, args.start, args.end)
+    print("📋 URLs para download manual:")
+    for url in urls:
+        print(url)
+
+
+def interactive_download_cmd(args):
+    interactive_download(args.feeds, args.date, args.start, args.end)
+
+
 
 if __name__ == '__main__':
   args = get_args()
@@ -55,5 +70,11 @@ if __name__ == '__main__':
     download(args)
   elif args.command == 'download-multi':
     download_multi(args)
+  elif args.command == "download-one":
+    download_one(args)
+  elif args.command == "generate-urls":
+    generate_urls_cmd(args)
+  elif args.command == "interactive-download":
+    interactive_download_cmd(args)
   else:
     print("❌ Comando inválido. Use --help para ver as opções.")

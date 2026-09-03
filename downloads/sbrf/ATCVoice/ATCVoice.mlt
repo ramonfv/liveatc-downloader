@@ -1,0 +1,145 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.33.0" title="Shotcut version 25.05.11" producer="main_bin">
+  <profile description="PAL 4:3 DV or DVD" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <chain id="chain0" out="00:37:20.040">
+    <property name="length">00:37:20.080</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001/LiveATC/SBRF-ACC-Feb-04-2026-1600Z.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">fltp</property>
+    <property name="meta.media.0.codec.sample_rate">8000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">mp3float</property>
+    <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
+    <property name="meta.media.0.codec.bit_rate">8000</property>
+    <property name="meta.attr.title.markup">Feb-04-2026-1600Z</property>
+    <property name="meta.attr.artist.markup">SBRF Recife ACC/LiveATC.net</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-08T15:52:20</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fadf2a563deef1324a26d0160f8dab6e</property>
+  </chain>
+  <chain id="chain1" out="00:31:54.000">
+    <property name="length">00:31:54.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001_stt_ready.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-08T16:14:20</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">6aea9b87d867214f6c1be8e24c52a27b</property>
+    <property name="ignore_points">1</property>
+    <property name="shotcut:caption">LiveATC-20260208T125151Z-1-001_stt_ready.wav</property>
+  </chain>
+  <chain id="chain2" out="00:31:54.000">
+    <property name="length">00:31:54.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001/LiveATC/SBRF-ACC-Feb-04-2026-1600Z_fir_fb_denoiser.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-08T18:13:53</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">0ba97f023dbe6dbd5a49f13d8d302aa4</property>
+    <property name="ignore_points">1</property>
+    <property name="shotcut:caption">SBRF-ACC-Feb-04-2026-1600Z_fir_fb_denoiser.wav</property>
+  </chain>
+  <playlist id="main_bin" title="Shotcut version 25.05.11">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:skipConvert">0</property>
+    <property name="xml_retain">1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:37:20.040"/>
+    <entry producer="chain1" in="00:00:00.000" out="00:31:54.000"/>
+    <entry producer="chain2" in="00:00:00.000" out="00:31:54.000"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:00:38.120">
+    <property name="length">00:00:38.160</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:00:38.120"/>
+  </playlist>
+  <chain id="chain7" out="00:31:54.000">
+    <property name="length">00:31:54.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/ReposGithub/liveatc-downloader/downloads/sbrf/ACC/LiveATC-20260208T125151Z-1-001_stt_ready.wav</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">s16</property>
+    <property name="meta.media.0.codec.sample_rate">16000</property>
+    <property name="meta.media.0.codec.channels">1</property>
+    <property name="meta.media.0.codec.layout">mono</property>
+    <property name="meta.media.0.codec.name">pcm_s16le</property>
+    <property name="meta.media.0.codec.long_name">PCM signed 16-bit little-endian</property>
+    <property name="meta.media.0.codec.bit_rate">256000</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-02-08T16:14:20</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">6aea9b87d867214f6c1be8e24c52a27b</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">LiveATC-20260208T125151Z-1-001_stt_ready.wav</property>
+  </chain>
+  <playlist id="playlist4">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="chain7" in="00:00:48.720" out="00:01:26.840"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 25.05.11" in="00:00:00.000" out="00:00:38.120">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:skipConvert">0</property>
+    <track producer="background"/>
+    <track producer="playlist4" hide="video"/>
+    <transition id="transition4">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+  </tractor>
+</mlt>

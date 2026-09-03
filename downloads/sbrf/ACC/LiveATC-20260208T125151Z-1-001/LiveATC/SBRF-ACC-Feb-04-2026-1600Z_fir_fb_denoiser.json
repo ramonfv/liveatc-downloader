@@ -1,0 +1,481 @@
+{
+    "name": "SBRF-ACC-Feb-04-2026-1600Z_fir_fb_denoiser",
+    "description": "Transcrição do áudio.",
+    "file_format": "json",
+    "created_at": "2026-02-08T12:51:51Z",
+    "metadata": {
+        "location": "SBRF-ACC",
+        "date_time": "2026-02-04T16:00:00Z",
+        "processing": {
+        "method": "fir_fb_denoiser",
+        "parameters": {
+            "cutoff_frequency": 3000,
+            "filter_order": 64
+        }
+        }
+    },
+    "transcription": [
+        {
+            "started_at": "2026-02-09T12:34:57.252382", 
+            "ended_at": "2026-02-09T12:34:57.252382",
+            "speaker": "Controller",
+            "text": "TAM 3523, chame controle fortaleza na frequencia 133 decimal 0."
+        },
+        {
+            "timestamp": "00:58",
+            "speaker": "Controller",
+            "text": "Comunmicação em inglês, áudio não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:35:22.302127", 
+            "ended_at": "2026-02-09T12:35:22.302127",
+            "speaker": "Controller",
+            "text": "Azul 2514 serviço radar encerrado confirme contato bilateral com Fernando de Noronha.",
+            "observations": "Baixa confiança na palavra confirme."
+        },
+        {
+            "started_at": "2026-02-09T12:35:29.649667", 
+            "ended_at": "2026-02-09T12:35:29.649667",
+            "speaker": "Controller",
+            "text": "Azul 2514, prossiga em definitivo com a rádio Fernando de Noronha."
+        },
+        {
+            "started_at": "2026-02-09T12:39:10.919388", 
+            "ended_at": "2026-02-09T12:39:10.919388",
+            "speaker": "Pilot",
+            "text": "Comunmicação em inglês, áudio não considerado."
+            
+        },
+        {
+            "started_at": "2026-02-09T12:39:37.600913", 
+            "ended_at": "2026-02-09T12:39:37.600913",
+            "speaker": "Pilot",
+            "text": "Comunmicação em inglês, áudio não considerado."
+
+        },
+        {
+            "started_at": "2026-02-09T12:39:39.684679", 
+            "ended_at": "2026-02-09T12:39:39.684679",
+            "speaker": "Pilot",
+            "text": "Comunmicação em inglês, áudio não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:40:39.172110", 
+            "ended_at": "2026-02-09T12:40:39.172110",
+            "speaker": "Controller",
+            "text": "Gol 1541 Centro Recife voe direto over duve mantendo nível de voo 360.",
+            "observations": "Baixa confiança na palavra over duve."
+        },
+        {
+            "started_at": "2026-02-09T12:41:21.861754", 
+            "ended_at": "2026-02-09T12:41:21.861754", 
+            "speaker": "Controller",
+            "text": "Comunmicação em inglês, áudio não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:41:34.778068", 
+            "ended_at": "2026-02-09T12:41:34.778068",
+            "speaker": "Controller",
+            "text": "Comunmicação em inglês, áudio não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:41:48.559547", 
+            "ended_at": "2026-02-09T12:41:48.559547", 
+            "speaker": "Pilot",
+            "text": "Centro Papa papa Uniform Sierra Alpha."
+        },
+        {
+            "started_at": "2026-02-09T12:42:22.035050", 
+            "ended_at": "2026-02-09T12:42:22.035050",
+            "speaker": "Controller",
+            "text": "Papa papa Unifor Sierra Alpha."
+        },
+        {
+            "started_at": "2026-02-09T12:42:03.907925", 
+            "ended_at": "2026-02-09T12:42:03.907925", 
+            "speaker": "Controller",
+            "text": "Comunmicação em inglês, áudio não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:42:38.641313", 
+            "ended_at": "2026-02-09T12:42:38.641313",
+            "speaker": "Pilot",
+            "text": "Centro Refice Papa papa Uniform Sierra Alpha.",
+            "observations": "Baixa confiança no áudio."
+        },
+
+        {
+            "started_at": "2026-02-09T12:42:38.641313", 
+            "ended_at": "2026-02-09T12:42:38.641313",
+            "speaker": "Pilot",
+            "text": "Centro Papa papa Uniform Sierra Alpha por gentileza qual a chegada em Sierra Golf.",
+            "observations": "Baixa confiança no áudio últimas palavras não distinguíveis."
+        },
+        {
+            "timestamp": "08:26",
+            "speaker": "Controller",
+            "text": "Aguarde."
+        },
+        {
+            "started_at": "2026-02-09T12:42:39.388868", 
+            "ended_at": "2026-02-09T12:42:39.388868", 
+            "speaker": "Controller",
+            "text": "Chegada Tozagui ono Bravo.",
+            "observations": "Baixa confiança na palavra Tozagui."
+        },
+        {
+            "timestamp": "08:40",
+            "speaker": "Pilot",
+            "text": "Papa papa Uniform Sierra Alpha, Chegada Tozagui ono Bravo.",
+            "observations": "Baixa confiança na palavra Tozagui."
+        },
+        {
+            "started_at": "2026-02-09T12:42:56.005340", 
+            "ended_at": "2026-02-09T12:42:56.005340",
+            "speaker": "Controller",
+            "text": "Chegada Tozagui ono Bravo, papa papa Uniform Sierra Alpha."
+        },
+        {
+            "timestamp": "08:46",
+            "speaker": "Pilot",
+            "text": "Confirme a chegada por gentileza.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:42:56.005349", 
+            "ended_at": "2026-02-09T12:42:56.005349",
+            "speaker": "Controller",
+            "text": "Chegada Tozagui ono Bravo."
+        },
+        {
+            "started_at": "2026-02-09T12:43:08.378033", 
+            "ended_at": "2026-02-09T12:43:08.378033",
+            "speaker": "Pilot",
+            "text": "Recife boa tarde, Azul 2823 pesado."
+        },
+        {
+            "started_at": "2026-02-09T12:43:20.093999", 
+            "ended_at": "2026-02-09T12:43:20.093999",
+            "speaker": "Controller",
+            "text": "Azul 2823 pesado, livra uno nove zero para o quatro nove zero, Quatro nove zero Azul",
+            "observations": "Baixa confiança na palavra livra."
+        },
+        {
+            "started_at": "2026-02-09T12:44:02.299017", 
+            "ended_at": "2026-02-09T12:44:02.299017",
+            "speaker": "Controller",
+            "text": "Azul 2723 mudar frequencia decimal uno cinco alterna tres cinco decimal dois cinco",
+            "observations": "Baixa confiança na palavra mudar."
+        },
+        {
+            "started_at": "2026-02-09T12:44:08.131404", 
+            "ended_at": "2026-02-09T12:44:08.131404",
+            "speaker": "Pilot",
+            "text": "",
+            "observations": "Áudio não considerado, fala indistinguível."
+        },
+        {
+            "timestamp": "nao identificado no STT",
+            "speaker": "Controller",
+            "text": "Decimal uno cinco alterna tres cinco decimal dois cinco, Azul 2723."
+        },
+        {
+            "started_at": "2026-02-09T12:44:24.299171", 
+            "ended_at": "2026-02-09T12:44:24.299171",
+            "speaker": "Controller",
+            "text": "Azul 2723 centro recife mantenha nível de voo 380"
+        },
+        {
+            "started_at": "2026-02-09T12:45:15.458065", 
+            "ended_at": "2026-02-09T12:45:15.458065",
+            "speaker": "Controller",
+            "text": "Um cinco dois sete centro recife mantem nível de voo 367."
+        },
+        {
+            "started_at": "2026-02-09T12:45:42.921113", 
+            "ended_at": "2026-02-09T12:45:42.921113",
+            "speaker": "Pilot",
+            "text": "Centro papa papa Uniform Sierra Alpha",
+            "observations": "Áudio não considerado, fala indistinguível."
+        },
+        {
+            "started_at": "2026-02-09T12:45:42.921113", 
+            "ended_at": "2026-02-09T12:45:42.921113",
+            "speaker": "Controller",
+            "text": "Papa papa Uniform Sierra Alpha, aguarde."
+        },
+        {
+            "started_at": "2026-02-09T12:45:46.519898", 
+            "ended_at": "2026-02-09T12:45:46.519898", 
+            "speaker": "Controller",
+            "text": "Papa papa Uniform Sierra Alpha voe direto visível.",
+            "observations": "Baixa confiança na palavra visível."
+        },
+        {
+            "started_at": "2026-02-09T12:46:28.551562", 
+            "ended_at": "2026-02-09T12:46:28.551562",
+            "speaker": "Pilot",
+            "text": "Direto *** Uniform Sierra Alpha.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:48:30.529742", 
+            "ended_at": "2026-02-09T12:48:30.529742", 
+            "speaker": "Controller",
+            "text": "Papa papa Uniform Sierra Alpha, decida autorizada para nível de voo um zero zero."
+        },
+        {
+            "started_at": "2026-02-09T12:49:04.281504", 
+            "ended_at": "2026-02-09T12:49:04.281504", 
+            "speaker": "Controller",
+            "text": "Uno tres cinco mantenha nível de voo 370.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:49:58.307576", 
+            "ended_at": "2026-02-09T12:49:58.307576", 
+            "speaker": "Controller",
+            "text": "Azul 8755, aguarde"
+        },
+        {
+            "started_at": "2026-02-09T12:50:55.585060", 
+            "ended_at": "2026-02-09T12:50:55.585060",
+            "speaker": "Controller",
+            "text": "Aguarde confirmação com o controle para proa mais a frente.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:51:02.601962", 
+            "ended_at": "2026-02-09T12:51:02.601962",
+            "speaker": "Controller",
+            "text": "356 ciente, aguarde.",
+            "observations": "Baixa confiança no começo."
+        },
+        {
+            "started_at": "2026-02-09T12:51:40.809774", 
+            "ended_at": "2026-02-09T12:51:40.809774",
+            "speaker": "Controller",
+            "text": "Alterna tres quatro decimal cinco."
+        },
+        {
+            "started_at": "2026-02-09T12:51:48.866610", 
+            "ended_at": "2026-02-09T12:51:48.866610", 
+            "speaker": "Controller",
+            "text": "tres oito tres Tam 3839 centro",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:51:57.705047", 
+            "ended_at": "2026-02-09T12:51:57.705047", 
+            "speaker": "Pilot",
+            "text": "3829 chama uno 3 3 meia cinco, alterna 3 4 5 TAM 3829"
+        },
+        {
+            "started_at": "2026-02-09T12:52:05.429657", 
+            "ended_at": "2026-02-09T12:52:05.429657",
+            "speaker": "Controller",
+            "text": "Azul 8755 chame centro Recife frequencia uno 3 3  decimal 6 5, alterna 3 4 decimal 5."
+        },
+        {
+
+            "started_at": "2026-02-09T12:52:21.586132", 
+            "ended_at": "2026-02-09T12:52:21.586132",
+            "text": "Azul 2723 ciente, descida autorizada .....",
+            "observations": "Baixa confiança no áudio após a palavra autorizada."
+        },
+        {
+            "started_at": "2026-02-09T12:52:48.758275", 
+            "ended_at": "2026-02-09T12:52:48.758275",
+            "speaker": "Pilot",
+            "text": "Recife TAM 3829 mantendo 340."
+        },
+        {
+            "started_at": "2026-02-09T12:53:00.345983", 
+            "ended_at": "2026-02-09T12:53:00.345983", 
+            "speaker": "Controller",
+            "text": "Recife subi e mantem nível de voo 340.",
+            "observations": "Baixa confiança no subi e mantem."
+        },
+
+
+        {
+            "started_at": "2026-02-09T12:53:21.190163", 
+            "ended_at": "2026-02-09T12:53:21.190163",
+            "speaker": "Controller",
+            "text": "Gol 1527 ciente desvio está autorizado após desvio voo direto para a posicao Ivi Pivi",
+            "observations": "Baixa confiança nas palavras Ivi Pivi"
+        },
+        {
+            "started_at": "2026-02-09T12:53:26.194676", 
+            "ended_at": "2026-02-09T12:53:26.194676",
+            "speaker": "Pilot",
+            "text": "Solicito quatro zero zero",
+            "observations": "Baixa confiança no áudio."
+        },
+
+        {
+            "started_at": "2026-02-09T12:54:44.445131", 
+            "ended_at": "2026-02-09T12:54:44.445131", 
+            "speaker": "Pilot",
+            "text": "uno cinco quatro uno",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:54:53.570780", 
+            "ended_at": "2026-02-09T12:54:53.570780", 
+            "speaker": "Controller",
+            "text": "Gol cinco quatro uno, centro."
+        },
+        {
+            "started_at": "2026-02-09T12:54:53.570780", 
+            "ended_at": "2026-02-09T12:54:53.570780", 
+            "speaker": "Pilot",
+            "text": "aaaooooo é que eu mudei a frenquencia aqui só para teste.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:54:59.363969", 
+            "ended_at": "2026-02-09T12:54:59.363969",
+            "speaker": "Controller",
+            "text": "cinco quatro uno, ciente."
+        },
+        {
+            "started_at": "2026-02-09T12:55:50.865940", 
+            "ended_at": "2026-02-09T12:55:50.865940",
+            "speaker": "Controller",
+            "text": "Gol cinquenta uno centro Refice, mantenha nível de voo 360."
+        },
+        {
+            "started_at": "2026-02-09T12:56:30.302628", 
+            "ended_at": "2026-02-09T12:56:30.302628",
+            "speaker": "Controller",
+            "text": "TAM 3490 descida autorizada. para nivel de voo 1 cinco zero."
+        },
+        {
+            "started_at": "2026-02-09T12:56:39.623020", 
+            "ended_at": "2026-02-09T12:56:39.623020",
+            "speaker": "Controller",
+            "text": "TAM 3490 troque para 1 2 5 decimal 2 5."
+        },
+        {
+            "started_at": "2026-02-09T12:57:00.966175", 
+            "ended_at": "2026-02-09T12:57:00.966175",
+            "speaker": "Controller",
+            "text": "Papa papa Uniform Sierra Alpha, chame controle Recife frequencia uno uno nove, decimal meia cinco."
+        },
+        {
+            "started_at": "2026-02-09T12:57:15.878194", 
+            "ended_at": "2026-02-09T12:57:15.878194", 
+            "speaker": "Controller",
+            "text": "TAM 3490 como recebe"
+        },
+        {
+            "started_at": "2026-02-09T12:57:38.772452", 
+            "ended_at": "2026-02-09T12:57:38.772452",
+            "speaker": "Controller",
+            "text": "Áudio em inglês, não considerado."
+        },
+        {
+            "started_at": "2026-02-09T12:58:12.592537", 
+            "ended_at": "2026-02-09T12:58:12.592537", 
+            "speaker": "Controller",
+            "text": "Azul 4 meia meia nove, ciente desvio autorizado report retornando a rota.",
+            "observations": "Baixa confiança depois de autorizado."
+        },
+        {
+            "started_at": "2026-02-09T12:59:23.447139", 
+            "ended_at": "2026-02-09T12:59:23.447139",
+            "speaker": "Pilot",
+            "text": "papa alpha charlie lime quebec, centro recife, mantenha nivel de voo 2 uno zero.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T12:59:30.776767", 
+            "ended_at": "2026-02-09T12:59:30.776767", 
+            "speaker": "Controller",
+            "text": "3490 chame o controle fortaleza na frequencia 1 3 3 decimal 0, bom pouso."
+        },
+        {
+            "timestamp": "nao identificado no STT",
+            "speaker": "Controller",
+            "text": "3490 centro"
+        },
+        {
+            "timestamp": "Não Identificado no STT",
+            "speaker": "Controller",
+            "text": "frequencia 1 3 3 decimal 0, bom pouso."
+        },
+        {
+            "started_at": "2026-02-09T12:59:30.776767", 
+            "ended_at": "2026-02-09T12:59:30.776767", 
+            "speaker": "Pilot",
+            "text": "GOL cinco quatro uno, chame centro recife frequencia  1 3 3 decimal meia 5, alterna 3 4 decimal 5.",
+            "observations": "Baixa confiança no áudio depois de decimal."
+        },
+        {
+            "started_at": "2026-02-09T13:01:23.947986", 
+            "ended_at": "2026-02-09T13:01:23.947986", 
+            "speaker": "Controller",
+            "text": "cinco oito um, confirme a proa."
+        },
+        {
+            "started_at": "2026-02-09T13:01:34.561994", 
+            "ended_at": "2026-02-09T13:01:34.561994", 
+            "speaker": "Controller",
+            "text": "nivel esta autorizado reportando a rota"
+        },
+        {
+            "started_at": "2026-02-09T13:01:46.538222", 
+            "ended_at": "2026-02-09T13:01:46.538222", 
+            "speaker": "Controller",
+            "text": "TAM tres cinco uno meia, confirme."
+        },
+        {
+            "started_at": "2026-02-09T13:01:54.504943", 
+            "ended_at": "2026-02-09T13:01:54.504943", 
+            "speaker": "Controller",
+            "text": "tres cinco uno meia, ciente."
+        },
+        {
+            "started_at": "2026-02-09T13:02:12.191452", 
+            "ended_at": "2026-02-09T13:02:12.191452", 
+            "speaker": "Controller",
+            "text": "Azul 2723 ciente, desvio está autorizado, voe direto vulbo partidiz.",
+            "observations": "Baixa confiança nas palavras vulbo partidiz."
+        },
+        {
+            "started_at": "2026-02-09T13:02:34.464702", 
+            "ended_at": "2026-02-09T13:02:34.464702",
+            "speaker": "Controller",
+            "text": "Correcao, voe direto dois sete, prossiga.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T13:02:49.686153", 
+            "ended_at": "2026-02-09T13:02:49.686153",
+            "speaker": "Controller",
+            "text": "Pa papa lima charlie quebec, informo o serviço estará terminado posicao dotico",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T13:03:13.771271", 
+            "ended_at": "2026-02-09T13:03:13.771271", 
+            "speaker": "Controller",
+            "text": "TAM tres cinco uno meia, decida autorizada para nivel de voo uno meia zero, na proa zero dois sete.",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "started_at": "2026-02-09T13:05:24.150520", 
+            "ended_at": "2026-02-09T13:05:24.150520", 
+            "speaker": "Controller",
+            "text": "Ciente, lima charlie quebec, na posicao dot, em caso de falha assuma o controle fortaleza frequencia 1 3 3 decimal 0, confirme se já está voando na posição dotico",
+            "observations": "Baixa confiança no áudio."
+        },
+        {
+            "timestamp": "Não Identificado no STT",
+            "speaker": "Controller",
+            "text": "Azul 4669 centro"
+        }
+    ]
+
+}
